@@ -1,85 +1,185 @@
-## DocuVille Software Engineer Technical Assessment 2025
+# travelfy-client
 <div id="top"></div>
-Problem Statement
 
-Create a document similarity detection system that compares two text documents and returns a similarity score between 0 and 1.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/Nagoluaadhi/travelfy-client.git">
+    <img src="src/assets/images/travelfy-logo-blue.jpg" alt="travelfy Logo" width="250" height="75" alt="Travelfy">
+  </a>
+  <h3 align="center">Travel planner</h3>
+     MERN stack app
+    <br />
+   <a href="https://travelfy.netlify.app/">View Demo</a>
+</div>
 
-System Design 
-
-Components:
-
-Input Layer: Accept two text files (doc1.txt, doc2.txt)
-
-Preprocessing: Lowercase, remove punctuation and stopwords
-
-Feature Extraction: TF-IDF Vectorization
-
-Similarity Calculation: Cosine Similarity
-
-Output: Print similarity score
-
-Design Diagram:
-
-doc1.txt ──┐
-           ├─> Preprocessing ──> TF-IDF Vectorizer ──┐
-doc2.txt ──┘                                          │
-                                        Cosine Similarity ──> Similarity Score
-
-Files
-
-doc1.txt: Contains first document text
-
-doc2.txt: Contains second document text
-
-doc_similarity.py: Python script that calculates similarity score
-
-How to Run
-
-Make sure you have Python 3.7+
-
-Install dependencies:
-
-pip install scikit-learn nltk
-
-Run the script:
-
-python doc_similarity.py
-
-Output will be like:
-
-Similarity Score: 0.2882
-
-Sample Inputs
-
-doc1.txt:
-
-Artificial intelligence is transforming the world. It is used in automation, healthcare, and finance.
-
-doc2.txt:
-
-AI is changing how the world works. It has applications in healthcare, automation, and financial sectors.
-
-Feedback
-
-This task was a great hands-on experience in text similarity and NLP.
-
-TF-IDF and cosine similarity made for a simple yet effective baseline solution.
-
-Improvements If More Time Was Available
-
-Use semantic similarity (Sentence Transformers / BERT)
-
-Compare more than 2 documents at once
-
-Build a web UI with drag-and-drop features
-
-Use vector storage for efficient large-scale comparisons
-
-Screenshot of Output
+<!-- TABLE OF CONTENTS -->
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#api">API required</a></li>
+    <li><a href="#scripts">Scripts</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
 
 
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-GitHub Repo (Optional): [Add your GitHub repo link here]
+![Travelfy Screenshot][product-screenshot]
 
-Screenshots / Proof of Work: Included above as similarity_output_screenshot.png
+This is a travel planner MERN stack app.
 
+You will find:
+* Attractions, hotels and restaurants from anywhere in the world. Map and Place list. :earth_americas:
+* Save the places you love in a trip list. (MongoDB = Reduce API calls) :world_map:
+* Around me section. (This will get the user's IP, find the lat&lng with it and show the map and places around)
+* 7-day weather forecast for any city. :umbrella:	
+* User Profile (Profile image, username, name, change password)
+* Google Maps and Google Autocomplete.
+
+<p align="right"><a href="#top">back to top ^</a></p>
+
+
+### Built With
+
+* [React.js](https://reactjs.org/)
+* [Material-UI](https://mui.com/)
+* [Node.js](https://nodejs.org/en/)
+* [Express.js](https://expressjs.com/)
+* [MongoDB](https://www.mongodb.com/)
+
+<p align="right"><a href="#top">back to top ^</a></p>
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running follow these example steps:
+
+### Prerequisites
+
+Verify if you already have Node.js and npm installed:
+  ```sh
+  node -v
+  npm -v
+  ```
+
+ To download the latest version of npm, on the command line, run the following command:
+  ```sh
+  npm install -g npm
+  ```
+
+### Installation
+
+_Follow this simple steps:_
+
+1. Clone the repo
+   ```sh
+   https://github.com/Nagoluaadhi/travelfy-client.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Enter all your API keys in `.env` file
+   ```js
+   REACT_APP_NAME_API = 'ENTER YOUR API';
+   ```
+
+**Note:**
+* This is the Front-end (client) repository.
+* You **need** to clone the [Back-end (server) repository.](https://github.com/Nagoluaadhi/travelfy-server)
+
+<p align="right"><a href="#top">back to top ^</a></p>
+
+<!-- API LIST -->
+## API
+
+**Client**:
+* [Google Maps](https://developers.google.com/maps)
+* [Open Weather](https://openweathermap.org/api)
+* [Rapid API Travel](https://rapidapi.com/apidojo/api/travel-advisor)
+* [FreeGeoIp](https://freegeoip.app/)
+
+**Server**:
+* [Cloudinary](https://cloudinary.com/)
+
+<p align="right"><a href="#top">back to top ^</a></p>
+
+<!-- SCRIPTS -->
+## Scripts
+
+In the project directory:
+
+ ```sh
+  npm start
+ ```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+ ```sh
+  npm run build
+ ```
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+<p align="right"><a href="#top">back to top ^</a></p>
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+ <div align="center">
+ <h3 >Place list</h3>
+  <p>Includes Google Autocomplete & place filters</p>
+
+![Travelfy Screenshot][product-screenshot2]
+
+ <h3 >My Trips</h3>
+  <p>Save places for each trip </p>
+  <p>Map with trip markers</p>
+
+![Travelfy Screenshot][product-screenshot3]
+
+  <h3>Weather</h3>
+  <p>7-day forecast for any city in the world</p>
+
+![Travelfy Screenshot][product-screenshot4]
+
+ </div>
+
+<p align="right"><a href="#top">back to top ^</a></p>
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `License.txt` for more information.
+
+
+<p align="right"><a href="#top">back to top ^</a></p>
+
+
+[product-screenshot]: src/assets/images/home.jpg
+[product-screenshot2]: src/assets/images/explore.jpg
+[product-screenshot3]: src/assets/images/mytrips.jpg
+[product-screenshot4]: src/assets/images/weather.jpg
