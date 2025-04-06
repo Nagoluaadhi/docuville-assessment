@@ -3,7 +3,7 @@
 
 This project solves the problem of calculating a similarity score between two text documents using NLP techniques. It is part of the DocuVille Software Engineer Technical Assessment 2025.
 
-You will find:
+# You will find:
 
 Document comparison pipeline using TF-IDF and cosine similarity
 
