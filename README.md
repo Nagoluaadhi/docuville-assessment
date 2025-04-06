@@ -92,6 +92,20 @@ AI is changing how the world works. It has applications in healthcare, automatio
 Output after running script:
 ![Similarity Output Screenshot](Output.png)
 
+# Feedback and Opportunities for Iteration
+
+This project was a great learning experience in applying NLP techniques for document comparison. The TF-IDF and cosine similarity approach worked well for small files.
+
+If given more time, I would:
+
+* Add a user-friendly web interface.
+
+* Improve input validation and file handling for better security.
+
+* Support batch comparisons for scalability.
+
+Overall, it was a fun and insightful exercise.
+
 # Contact
 * Audi Kesava Reddy Nagolu
 * Email: audinagolu01@gmail.com🔗 
